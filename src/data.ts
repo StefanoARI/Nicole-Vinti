@@ -6,11 +6,11 @@
 import { ServiceDetail, InstagramPost, Testimonial } from './types';
 
 export const IMAGE_PATHS = {
-  nicoleVinti: '/src/assets/images/nicole_vinti_1783953179962.jpg',
-  bridalUpdo: '/src/assets/images/bridal_updo_1783953200731.jpg',
-  bridalWaves: '/src/assets/images/bridal_waves_1783953224039.jpg',
-  blondeBalayage: '/src/assets/images/blonde_balayage_1783953245171.jpg',
-  salonInterior: '/src/assets/images/salon_interior_1783953266036.jpg',
+  nicoleVinti: new URL('./assets/images/nicole_vinti_1783953179962.jpg', import.meta.url).href,
+  bridalUpdo: new URL('./assets/images/bridal_updo_1783953200731.jpg', import.meta.url).href,
+  bridalWaves: new URL('./assets/images/bridal_waves_1783953224039.jpg', import.meta.url).href,
+  blondeBalayage: new URL('./assets/images/blonde_balayage_1783953245171.jpg', import.meta.url).href,
+  salonInterior: new URL('./assets/images/salon_interior_1783953266036.jpg', import.meta.url).href,
 };
 
 export const SERVICES_DATA: ServiceDetail[] = [
