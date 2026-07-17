@@ -1,0 +1,6 @@
+{
+  "name": "Nicole Vinti",
+  "description": "Sito ufficiale di Nicole Vinti, Hair Designer e Bridal Specialist. Servizi di acconciatura sposa, taglio e colore personalizzati con un approccio moderno, elegante e professionale.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
