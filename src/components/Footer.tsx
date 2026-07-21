@@ -23,9 +23,9 @@ export default function Footer({ setCurrentPage, openPrivacyModal }: FooterProps
   return (
     <footer id="app-footer" className="bg-neutral-950 border-t border-neutral-900 text-neutral-400 font-sans pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Colonna Brand / Logo */}
-          <div className="space-y-4">
+          <div className="space-y-4 lg:col-span-1">
             <div className="flex flex-col cursor-pointer" onClick={() => handleNav('home')}>
               <span className="text-xl font-serif font-bold tracking-[0.15em] text-amber-100 uppercase">
                 NICOLE VINTI
@@ -51,44 +51,72 @@ export default function Footer({ setCurrentPage, openPrivacyModal }: FooterProps
           </div>
 
           {/* Colonna Servizi */}
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="text-sm font-semibold text-white tracking-[0.15em] uppercase mb-5 font-serif">
-              Servizi Esclusivi
+              Mondo Nicole Vinti
             </h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <button
-                  onClick={() => handleNav('bridal')}
-                  className="hover:text-amber-300 transition-colors text-left"
-                >
-                  Bridal Experience (Sposa)
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => handleNav('hair-design')}
-                  className="hover:text-amber-300 transition-colors text-left"
-                >
-                  Cut & Styling Couture
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => handleNav('color')}
-                  className="hover:text-amber-300 transition-colors text-left"
-                >
-                  Balayage & Color Brightness
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => handleNav('consulting')}
-                  className="hover:text-amber-300 transition-colors text-left"
-                >
-                  Consulenza d'Immagine
-                </button>
-              </li>
-            </ul>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
+              <button
+                onClick={() => handleNav('hair-design')}
+                className="hover:text-amber-300 transition-colors text-left"
+              >
+                Cut & Styling
+              </button>
+              <button
+                onClick={() => handleNav('beauty-hairspa')}
+                className="hover:text-amber-300 transition-colors text-left"
+              >
+                Beauty & Hairspa
+              </button>
+              <button
+                onClick={() => handleNav('color')}
+                className="hover:text-amber-300 transition-colors text-left"
+              >
+                Colore d'Autore
+              </button>
+              <button
+                onClick={() => handleNav('concept-store')}
+                className="hover:text-amber-300 transition-colors text-left"
+              >
+                Concept Store
+              </button>
+              <button
+                onClick={() => handleNav('hair-integration')}
+                className="hover:text-amber-300 transition-colors text-left"
+              >
+                Hair Integration
+              </button>
+              <button
+                onClick={() => handleNav('abbigliamento')}
+                className="hover:text-amber-300 transition-colors text-left"
+              >
+                Abbigliamento
+              </button>
+              <button
+                onClick={() => handleNav('barber-shop')}
+                className="hover:text-amber-300 transition-colors text-left"
+              >
+                Barber Shop
+              </button>
+              <button
+                onClick={() => handleNav('bridal')}
+                className="hover:text-amber-300 transition-colors text-left"
+              >
+                Sposa & Bridal
+              </button>
+              <button
+                onClick={() => handleNav('consulting')}
+                className="hover:text-amber-300 transition-colors text-left"
+              >
+                Consulenza Immagine
+              </button>
+              <button
+                onClick={() => handleNav('academy')}
+                className="hover:text-amber-300 transition-colors text-left text-amber-400 font-medium"
+              >
+                Academy & Corsi ★
+              </button>
+            </div>
           </div>
 
           {/* Colonna Orari */}

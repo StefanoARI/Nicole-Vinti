@@ -210,6 +210,294 @@ export const SERVICES_DATA: ServiceDetail[] = [
       { question: 'La mia stagione cromatica può cambiare nel tempo?', answer: 'No. Il sottotono della pelle, il contrasto e il valore sono caratteristiche genetiche che rimangono invariate per tutta la vita, anche con l\'abbronzatura o con il passare dell\'età.' },
       { question: 'La consulenza include suggerimenti specifici per il colore dei capelli?', answer: 'Sì, è l\'obiettivo principale del nostro Facial Styling! Individueremo l\'altezza di tono ideale, i riflessi migliori (caldi o freddi) e come distribuire la luce intorno al viso per addolcire i lineamenti.' }
     ]
+  },
+  {
+    id: 'concept-store',
+    title: 'Concept Store',
+    subtitle: 'Selezione Esclusiva & Lifestyle',
+    shortDesc: 'Un\'esperienza sensoriale oltre il capello. Scopri oggettistica di design, profumeria artistica e accessori rari scelti personalmente da Nicole Vinti.',
+    image: 'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=800',
+    problem: {
+      title: 'La massificazione degli acquisti e il bisogno di unicità',
+      description: 'Nel mondo del fast fashion e del design seriale, è sempre più difficile trovare pezzi unici, fragranze d\'autore o accessori capaci di esprimere la propria vera unicità e ricercatezza.',
+      points: [
+        'Profumi commerciali indossati da chiunque, privi di evoluzione sulla pelle.',
+        'Accessori e oggettistica privi di una vera anima artigianale e di una storia.',
+        'Regali banali e privi della cura del dettaglio che rende un oggetto prezioso.',
+        'L\'assenza di un luogo intimo dove fare acquisti lontani dalla frenesia dei centri commerciali.'
+      ]
+    },
+    solution: {
+      title: 'L\'Atelier delle Meraviglie di Nicole Vinti',
+      description: 'Una selezione raffinata di piccoli capolavori artigianali scelti in tutto il mondo da Nicole per esaltare il tuo stile di vita e circondarti di pura bellezza.',
+      points: [
+        {
+          title: 'Profumeria Artistica e di Nicchia',
+          description: 'Fragranze uniche composte da nasi internazionali con materie prime rare ed oli essenziali purissimi.'
+        },
+        {
+          title: 'Oggettistica e Candele Couture',
+          description: 'Pezzi di design d\'interni, candele di cera vegetale colate a mano e tessili preziosi per la tua casa.'
+        },
+        {
+          title: 'Accessori Bespoke e Gioielleria',
+          description: 'Fermagli gioiello, sciarpe di seta, occhiali ed elementi unici per completare il tuo stile d\'immagine.'
+        }
+      ]
+    },
+    approach: 'La bellezza non si ferma ai capelli, ma pervade l\'ambiente in cui vivi e gli oggetti di cui ti circondi. Il Concept Store è il mio diario di viaggio visivo e olfattivo, condiviso con te.',
+    durationPrice: 'Ingresso libero o su appuntamento per Private Shopping',
+    gallery: [
+      { url: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=800', alt: 'Profumi di nicchia d\'autore', title: 'Fragranze d\'Autore' },
+      { url: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=800', alt: 'Accessori e gioielli ricercati', title: 'Accessori di Design' },
+      { url: 'https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&q=80&w=800', alt: 'Candele naturali versate a mano', title: 'Candele Artigianali Aromaterapia' },
+      { url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800', alt: 'Oggetti luxury per arredamento interni', title: 'Home Decor Curated' }
+    ],
+    faqs: [
+      { question: 'Posso visitare il Concept Store senza prenotare un servizio capelli?', answer: 'Assolutamente sì. Il Concept Store è aperto a tutti gli amanti della bellezza e del design. Puoi venire a trovarci durante gli orari di apertura dell\'Atelier per esplorare la collezione o per un regalo speciale.' },
+      { question: 'Offrite un servizio di confezionamento regalo personalizzato?', answer: 'Sì, creiamo confezioni regalo esclusive con carte artigianali profumate, nastri di seta e sigillo in ceralacca personalizzato Nicole Vinti.' },
+      { question: 'I marchi presenti nel Concept Store sono biologici ed eco-sostenibili?', answer: 'Selezioniamo rigorosamente brand indipendenti che condividono la nostra filosofia di rispetto per l\'ambiente, con ingredienti naturali e processi produttivi etici certificati.' }
+    ]
+  },
+  {
+    id: 'beauty-hairspa',
+    title: 'Beauty & Hairspa',
+    subtitle: 'Rituali Rigeneranti Viso & Cute',
+    shortDesc: 'Sperimenta l\'unione tra la cura estetica profonda e il relax sensoriale. Trattamenti per cuoio capelluto, massaggi ayurvedici ed estetica viso d\'avanguardia.',
+    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=800',
+    problem: {
+      title: 'Stress, smog e tensioni che danneggiano pelle e capelli',
+      description: 'Il cuoio capelluto è il terreno in cui nascono i tuoi capelli. Stress quotidiano, tossine ambientali e trattamenti aggressivi possono infiammarlo, causando capelli spenti, fragili o tendenti alla caduta.',
+      points: [
+        'Cuoio capelluto arrossato, teso o affetto da anomalie cutanee (forfora, sebo).',
+        'Invecchiamento precoce dei tessuti cutanei del viso dovuto ad inquinamento e stanchezza.',
+        'Capelli che non crescono sani e vigorosi a causa di bulbi piliferi soffocati dalle tossine.',
+        'Stanchezza mentale accumulata che si riflette negativamente sui lineamenti.'
+      ]
+    },
+    solution: {
+      title: 'La Rinascita Sensoriale ed Estetica in Spa',
+      description: 'Un tempio del silenzio dove uniamo trattamenti tricologici curativi a massaggi linfodrenanti e rituali olistici per rigenerare corpo e mente.',
+      points: [
+        {
+          title: 'Detox & Scalp Therapy',
+          description: 'Trattamenti a base di fanghi termali, oli essenziali biologici purissimi e vapore profondo per ossigenare la cute.'
+        },
+        {
+          title: 'Massaggio Cranio-Sacrale & Ayurvedico',
+          description: 'Manovre avvolgenti che sciolgono le tensioni di spalle, collo e testa, stimolando la microcircolazione sanguigna.'
+        },
+        {
+          title: 'Rituali Viso Glow d\'Avanguardia',
+          description: 'Pulizia viso profonda unita a sieri all\'acido ialuronico, massaggi rassodanti Kobido e maschere lenitive.'
+        }
+      ]
+    },
+    approach: 'Trattiamo i capelli e la pelle non solo in superficie, ma andando alla radice del benessere. Un cuoio capelluto rigenerato è il segreto per capelli eternamente lucidi e forti.',
+    durationPrice: 'Trattamenti a partire da €50',
+    gallery: [
+      { url: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=800', alt: 'Trattamento viso rigenerante', title: 'Facial Treatment Kobido' },
+      { url: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=800', alt: 'Oli essenziali naturali estratti a freddo', title: 'Aromaterapia Olistica' },
+      { url: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800', alt: 'Lavaggio sensoriale con massaggio', title: 'Bespoke Scalp Massage' },
+      { url: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&q=80&w=800', alt: 'Massaggio rilassante testa', title: 'Rituale Rigenerante Cute' }
+    ],
+    faqs: [
+      { question: 'Come viene eseguita l\'analisi preliminare della cute?', answer: 'Utilizziamo una microcamera tricologica ad altissima risoluzione per valutare lo stato di salute del cuoio capelluto, rilevando idratazione, presenza di sebo, tossine o desquamazione prima di personalizzare il rituale.' },
+      { question: 'I trattamenti Hairspa sono consigliati anche per chi soffre di caduta dei capelli?', answer: 'Sì, assolutamente. I nostri trattamenti detossinanti e riattivanti liberano i follicoli ostruiti e stimolano l\'afflusso sanguigno, creando l\'ambiente ideale per frenare la caduta e favorire una ricrescita vigorosa.' },
+      { question: 'Quanto dura una sessione tipica in Hairspa?', answer: 'I nostri rituali variano da un minimo di 45 minuti (per trattamenti detox mirati) fino a 90 minuti per i percorsi sensoriali completi viso, cute e capelli.' }
+    ]
+  },
+  {
+    id: 'hair-integration',
+    title: 'Hair Integration',
+    subtitle: 'Infoltimento & Allungamento Naturale',
+    shortDesc: 'Soluzioni invisibili e non invasive per ritrovare volume, lunghezza e sicurezza. Nicole Vinti utilizza esclusivamente capelli veri certificati e tecniche di fissaggio ultra-delicate.',
+    image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=800',
+    problem: {
+      title: 'Diradamento, alopecia o difficoltà a far crescere i capelli',
+      description: 'Sia per fattori genetici, ormonali o stress, molte donne si trovano ad affrontare capelli estremamente fini, diradati sulla sommità o che si spezzano prima di raggiungere la lunghezza desiderata, compromettendo l\'autostima.',
+      points: [
+        'Disagio sociale causato da trasparenze evidenti sul cuoio capelluto.',
+        'Frustrazione per extension tradizionali visibili o che rovinano i capelli naturali col peso.',
+        'Mancanza di volume che rende impossibile qualsiasi piega duratura.',
+        'Sensazione di invecchiamento o stanchezza legata alla perdita di densità della chioma.'
+      ]
+    },
+    solution: {
+      title: 'Sistemi di Integrazione e Allungamento Invisibili',
+      description: 'L\'eccellenza tecnologica ed artigianale al servizio della tua chioma. Applichiamo membrane traspiranti, micro-connessioni ultraflat ed extension invisibili di capelli veri di altissima qualità.',
+      points: [
+        {
+          title: 'Micro-Integrazione localized',
+          description: 'Sistemi di capelli veri intrecciati o collegati su membrane in micro-rete invisibili e traspiranti, ideali per la zona del vertice.'
+        },
+        {
+          title: 'Premium Flat Tape Extension',
+          description: 'Fasce ultrasottili di capelli veri russi o indiani certificati che si integrano senza alcuno stacco visivo o tattile.'
+        },
+        {
+          title: 'Metodo Micro-Ring Cold System',
+          description: 'Fissaggio a freddo ipoallergenico che rispetta la fibra capillare senza l\'uso di colle sintetiche o fonti di calore elevate.'
+        }
+      ]
+    },
+    approach: 'L\'integrazione dei capelli non deve essere vissuta come una correzione di un difetto, ma come una celebrazione del tuo splendore. Nessuno noterà la differenza, tutti noteranno la tua nuova incredibile luce.',
+    durationPrice: 'Consulenza e preventivo personalizzato gratuito in cabina privata',
+    gallery: [
+      { url: 'https://images.unsplash.com/photo-1595853035070-59a39fe84de3?auto=format&fit=crop&q=80&w=800', alt: 'Capelli lunghi e folti biondi', title: 'Infoltimento Multidimensionale' },
+      { url: 'https://images.unsplash.com/photo-1605497746444-ac9dbd39f69c?auto=format&fit=crop&q=80&w=800', alt: 'Dettaglio applicazione extension', title: 'Micro-Integrazione Invisibile' },
+      { url: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800', alt: 'Lavaggio capelli sani e folti', title: 'Integrazione Volume Naturale' },
+      { url: 'https://images.unsplash.com/photo-1620331702289-5484cd1748f6?auto=format&fit=crop&q=80&w=800', alt: 'Sfumature bionde su capelli lunghi', title: 'Extension Luxury Silk' }
+    ],
+    faqs: [
+      { question: 'I capelli utilizzati sono veri al 100%?', answer: 'Sì, utilizziamo esclusivamente capelli veri vergini di prima scelta (Remy), con cuticole integre e orientate nella stessa direzione, per garantire morbidezza assoluta ed evitare nodi.' },
+      { question: 'Le tecniche di integrazione rovinano i miei capelli naturali?', answer: 'Assolutamente no. Nicole ha selezionato esclusivamente tecniche di fissaggio a freddo o micro-adesivi medicali biocompatibili che assecondano la crescita naturale del capello senza soffocarlo o appesantirlo.' },
+      { question: 'Come si gestiscono i capelli integrati a casa?', answer: 'Si lavano e si asciugano come i propri capelli. Al termine della sessione in Atelier ti forniremo una guida dettagliata e una spazzola speciale a setole differenziate per proteggere i punti di giunzione.' }
+    ]
+  },
+  {
+    id: 'abbigliamento',
+    title: 'Abbigliamento',
+    subtitle: 'Capsule Collection & Tailoring',
+    shortDesc: 'Capi sartoriali e accessori moda selezionati per esprimere la tua personalità. Un\'estensione naturale della consulenza d\'immagine per creare un total look coordinato.',
+    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800',
+    problem: {
+      title: 'Difficoltà ad abbinare abiti che rispecchino i propri colori e silhouette',
+      description: 'Molti armadi sono pieni di vestiti acquistati d\'impulso, ma che poi non vengono mai indossati perché la forma non valorizza le curve naturali o il colore spegne la luminosità del volto.',
+      points: [
+        'Acquisto di abiti di tendenza che non si adattano alle proprie proporzioni fisiche.',
+        'Incertezza nell\'abbinare i tessuti, i colori dei capi con il makeup e i capelli.',
+        'Guardaroba disordinato e privo di una coerenza stilistica di base.',
+        'Frustrazione nel vestirsi la mattina, con la sensazione di "non aver mai nulla da mettersi".'
+      ]
+    },
+    solution: {
+      title: 'Il Total Look Sartoriale Nicole Vinti',
+      description: 'Una capsule collection di capi esclusivi scelti per caduta dei tessuti, eleganza delle linee e palette cromatiche, coordinati al tuo Facial Styling per creare un\'armonia visiva assoluta.',
+      points: [
+        {
+          title: 'Tessuti Nobili e Naturali',
+          description: 'Selezioniamo solo capi in seta pura, lino fresco, cashmere ultra-morbido e cotone organico che accarezzano la pelle.'
+        },
+        {
+          title: 'Tagli che valorizzano le Forme',
+          description: 'Abiti, blazer e pantaloni studiati per esaltare i punti di forza di ogni body shape, slanciando la figura.'
+        },
+        {
+          title: 'Coordinamento Cromatico',
+          description: 'Tutti i capi sono catalogati in base alle stagioni dell\'Armocromia per rendere i tuoi abbinamenti semplici e immediati.'
+        }
+      ]
+    },
+    approach: 'Un abito non deve travestirti, ma deve rivelarti. Con la nostra selezione di abbigliamento, applichiamo le regole dell\'armocromia e dello styling alla tua figura per farti sentire sicura ed elegante in ogni istante.',
+    durationPrice: 'Consulenza di stile inclusa con l\'acquisto dei capi',
+    gallery: [
+      { url: 'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&q=80&w=800', alt: 'Abiti eleganti appesi', title: 'La Capsule Collection' },
+      { url: 'https://images.unsplash.com/photo-1583209814613-5116e6147d82?auto=format&fit=crop&q=80&w=800', alt: 'Tessuti di seta e lino dettagli', title: 'Tessuti Pregiati Artigianali' },
+      { url: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=800', alt: 'Modella vestito di classe giallo', title: 'Total Look Armocromatico' },
+      { url: 'https://images.unsplash.com/photo-1524250502761-136f2527df03?auto=format&fit=crop&q=80&w=800', alt: 'Dettagli di stile donna', title: 'Accessori in Pelle' }
+    ],
+    faqs: [
+      { question: 'Posso richiedere una sessione di Personal Shopping dedicata?', answer: 'Sì. Puoi prenotare una sessione esclusiva in cui un\'esperta del nostro team ti guiderà nella scelta dei capi perfetti per la tua stagione cromatica e la tua body shape, in totale privacy.' },
+      { question: 'Quali taglie sono disponibili nella Capsule Collection?', answer: 'La nostra collezione si concentra su tagli morbidi, asimmetrici o destrutturati studiati per adattarsi splendidamente a diverse fisicità. Copriamo taglie dalla 38 alla 50 italiana.' },
+      { question: 'I capi sono produzioni italiane?', answer: 'Sì, la quasi totalità della nostra capsule collection proviene da piccoli laboratori artigianali italiani che garantiscono rifiniture sartoriali di pregio e tessuti certificati Made in Italy.' }
+    ]
+  },
+  {
+    id: 'barber-shop',
+    title: 'Barber Shop',
+    subtitle: 'Grooming Maschile d\'Eccellenza',
+    shortDesc: 'L\'arte della rasatura tradizionale e dello styling maschile. Un angolo di puro benessere dedicato all\'uomo moderno che esige precisione sartoriale per capelli e barba.',
+    image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=800',
+    problem: {
+      title: 'Barba ispida, irritazioni da rasatura e tagli senza carattere',
+      description: 'Molti uomini sottovalutano la cura di barba e capelli, affidandosi a tagli rapidi o rasature frettolose che irritano la pelle, lasciano i peli della barba ispidi e non valorizzano la morfologia maschile.',
+      points: [
+        'Pelle del viso irritata, arrossata o secca dopo la rasatura quotidiana.',
+        'Barba disordinata, dura e difficile da pettinare o direzionare.',
+        'Tagli di capelli tutti uguali, eseguiti senza studiare la forma del cranio e della mascella.',
+        'Mancanza di un momento di stacco e relax interamente dedicato alle esigenze dell\'uomo.'
+      ]
+    },
+    solution: {
+      title: 'L\'Angolo Barber d\'Atelier',
+      description: 'Un rituale antico che combina la precisione geometrica dei tagli moderni con il calore distensivo del panno caldo e massaggi con oli emollienti d\'altri tempi.',
+      points: [
+        {
+          title: 'Taglio Sartoriale Maschile',
+          description: 'Taglio a forbice e sfumature millimetriche progettate in base alla forma del viso e alla direzione naturale di crescita dei capelli.'
+        },
+        {
+          title: 'Rasatura Tradizionale a Panno Caldo',
+          description: 'Sette passaggi rituali: oli pre-barba, doppia applicazione di panno caldo, insaponatura a pennello, rasatura a mano libera e panno freddo finale rigenerante.'
+        },
+        {
+          title: 'Beard Design & Care',
+          description: 'Modellatura geometrica della barba a rasoio e forbice, seguita da trattamenti di lavaggio e idratazione profonda con oli di nicchia.'
+        }
+      ]
+    },
+    approach: 'La cura dell\'uomo non è una routine veloce, ma un rituale di stile e rispetto per se stessi. Nel nostro Barber Shop, riscoprirai il piacere del tempo dedicato a te stesso.',
+    durationPrice: 'Servizi a partire da €35',
+    gallery: [
+      { url: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=800', alt: 'Barbiere taglia capelli uomo', title: 'Taglio Geometrico Maschile' },
+      { url: 'https://images.unsplash.com/photo-1512864084360-7c0c4d0a0845?auto=format&fit=crop&q=80&w=800', alt: 'Rituale rasatura con lama a mano libera', title: 'Rasatura Tradizionale Rasoio' },
+      { url: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=800', alt: 'Prodotti e oli per barba luxury', title: 'Trattamento Barba & Olio Idratante' },
+      { url: 'https://images.unsplash.com/photo-1605497746444-ac9dbd39f69c?auto=format&fit=crop&q=80&w=800', alt: 'Taglio sfumato moderno', title: 'Hair Grooming Precisione' }
+    ],
+    faqs: [
+      { question: 'In cosa consiste il servizio a "Panno Caldo"?', answer: 'È un rituale di benessere profondo: il panno caldo-umido dilata i pori, ammorbidisce il pelo della barba e distende i muscoli del viso. Questo rende la rasatura incredibilmente scorrevole, riducendo a zero le irritazioni e lasciando la pelle morbida.' },
+      { question: 'Ogni quanto dovrei regolare la barba in Atelier?', answer: 'Consigliamo una regolazione e definizione professionale ogni 2 o 3 settimane per mantenere la linea geometrica perfetta, l\'igiene e la morbidezza ottimale del pelo.' },
+      { question: 'Utilizzate prodotti specifici per pelli sensibili?', answer: 'Sì, utilizziamo creme da rasatura biologiche a base di eucalipto, sandalo o aloe vera, prive di parabeni e siliconi, specifiche per evitare qualsiasi reazione sulle pelli più delicate.' }
+    ]
+  },
+  {
+    id: 'academy',
+    title: 'Academy & Corsi',
+    subtitle: 'Formazione Professionale d\'Élite',
+    shortDesc: 'Svela i segreti delle tecniche esclusive di Nicole Vinti. Percorsi formativi avanzati in Dry Cut, Bridal Styling e Consulenza d\'Immagine per acconciatori che vogliono fare la differenza.',
+    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800',
+    problem: {
+      title: 'La standardizzazione del settore e la necessità di differenziarsi',
+      description: 'Molti acconciatori faticano ad emergere e ad attrarre clientela alto-spendente perché ripetono tecniche superate, senza saper comunicare o personalizzare il servizio basandosi sui lineamenti e l\'armocromia.',
+      points: [
+        'Difficoltà a giustificare listini premium per mancanza di competenze differenzianti.',
+        'Tagli standard che non valorizzano le diverse tipologie di viso e capelli.',
+        'Insicurezza nel gestire acconciature da sposa complesse in tempi rapidi.',
+        'Mancanza di metodo nell\'offrire una consulenza d\'immagine completa ed emotiva.'
+      ]
+    },
+    solution: {
+      title: 'I Master d\'Eccellenza Firmati Nicole Vinti',
+      description: 'Trasforma la tua professione con percorsi formativi intensivi a numero chiuso, con tanta pratica su modelle reali e l\'apprendimento del metodo di posizionamento marketing d\'élite.',
+      points: [
+        {
+          title: 'Master in Bridal Couture & Styling',
+          description: 'L\'arte delle acconciature sposa tridimensionali: chignon geometrici, semiraccolti e intrecci couture capaci di durare 24 ore.'
+        },
+        {
+          title: 'Master in Armocromia & Facial Styling',
+          description: 'Impara ad analizzare la stagione cromatica, i lineamenti e la forma del viso per progettare tagli e colori perfettamente sartoriali.'
+        },
+        {
+          title: 'Master in Dry Cut & Hair Sculpting',
+          description: 'Padroneggia il taglio a secco brevettato da Nicole Vinti: ridisegna la chioma rispettando le proporzioni fisiche e il volume naturale.'
+        }
+      ]
+    },
+    approach: 'La formazione non deve essere solo un elenco di nozioni teoriche. Ti svelerò passo dopo passo come ho costruito la mia firma stilistica e il mio modello di business, guidandoti verso un posizionamento di lusso.',
+    durationPrice: 'Masterclass a partire da 1 giorno intensivo con rilascio di Certificato Ufficiale',
+    gallery: [
+      { url: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800', alt: 'Lezione teorica e pratica in aula', title: 'Aule Didattiche Esclusive' },
+      { url: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800', alt: 'Pratica e modellatura su modella', title: 'Pratica Diretta su Modelle' },
+      { url: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800', alt: 'Consegna dei diplomi certificati Nicole Vinti', title: 'Rilascio Diplomi Accreditati' },
+      { url: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=800', alt: 'Presentazione sul palco delle tendenze moda', title: 'Trend-Setting & Show live' }
+    ],
+    faqs: [
+      { question: 'A chi sono rivolti i corsi dell\'Academy?', answer: 'I corsi sono pensati per acconciatori professionisti, truccatori, bridal specialist o aspiranti image consultant che desiderano innalzare il proprio livello tecnico e strategico.' },
+      { question: 'Vengono fornite le modelle per la sessione pratica?', answer: 'Sì, l\'Academy si occupa di selezionare modelle reali per consentire a ogni partecipante di sperimentare le tecniche di taglio, colore o acconciatura sotto la supervisione diretta di Nicole.' },
+      { question: 'Rilasciate un attestato di partecipazione alla fine del corso?', answer: 'Sì, al completamento di ogni Masterclass viene rilasciato l\'esclusivo Diploma di Specializzazione Nicole Vinti Academy, spendibile a livello professionale.' }
+    ]
   }
 ];
 

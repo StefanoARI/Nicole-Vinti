@@ -200,7 +200,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {SERVICES_DATA.map((service) => (
               <div
                 key={service.id}
@@ -218,7 +218,17 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
                     <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/10 to-transparent" />
                     <div className="absolute bottom-4 left-4">
                       <span className="text-[10px] bg-amber-500 text-neutral-950 px-3 py-1 rounded-full uppercase font-bold tracking-wider">
-                        {service.id === 'bridal' ? 'Bridal Specialist' : 'Couture Design'}
+                        {service.id === 'bridal'
+                          ? 'Bridal Specialist'
+                          : service.id === 'barber-shop'
+                          ? 'Barber & Grooming'
+                          : service.id === 'beauty-hairspa'
+                          ? 'Wellness & Spa'
+                          : service.id === 'concept-store'
+                          ? 'Boutique & Lifestyle'
+                          : service.id === 'academy'
+                          ? 'Elite Academy'
+                          : 'Couture Design'}
                       </span>
                     </div>
                   </div>
