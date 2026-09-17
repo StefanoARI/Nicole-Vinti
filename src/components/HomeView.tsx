@@ -18,6 +18,29 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
   const [activeBeforeAfterTab, setActiveBeforeAfterTab] = useState<'balayage' | 'updo'>('balayage');
 
   const handleNav = (pageId: PageId) => {
+    if (pageId === 'hair-design' || pageId === 'color' || pageId === 'hair-integration') {
+      setCurrentPage('atelier-capelli');
+      setTimeout(() => {
+        const anchor = pageId === 'hair-design' ? 'taglio-styling' : pageId === 'color' ? 'colore' : 'hair-integration';
+        const el = document.getElementById(anchor);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 150);
+      return;
+    }
+    if (pageId === 'bridal' || pageId === 'consulting') {
+      setCurrentPage('sposa-immagine');
+      setTimeout(() => {
+        const anchor = pageId === 'bridal' ? 'sposa' : 'consulenza';
+        const el = document.getElementById(anchor);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 150);
+      return;
+    }
+    if (pageId === 'academy') {
+      setCurrentPage('corsi');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     setCurrentPage(pageId);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };

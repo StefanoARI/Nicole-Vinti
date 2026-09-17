@@ -8,9 +8,14 @@ import { motion, AnimatePresence } from 'motion/react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomeView from './components/HomeView';
+import AboutView from './components/AboutView';
+import ContactView from './components/ContactView';
+import AtelierCapelliView from './components/AtelierCapelliView';
+import SposaImmagineView from './components/SposaImmagineView';
+import GiftCardView from './components/GiftCardView';
+import CorsiView from './components/CorsiView';
 import ServiceLandingPage from './components/ServiceLandingPage';
 import BookingForm from './components/BookingForm';
-import AboutView from './components/AboutView';
 import PrivacyBanner from './components/PrivacyBanner';
 import { SERVICES_DATA, IMAGE_PATHS } from './data';
 import { PageId } from './types';
@@ -22,6 +27,7 @@ export default function App() {
   const activeService = SERVICES_DATA.find((s) => s.id === currentPage);
 
   const renderContent = () => {
+    // 1. Home
     if (currentPage === 'home') {
       return (
         <motion.div
@@ -29,27 +35,104 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
         >
           <HomeView setCurrentPage={setCurrentPage} />
         </motion.div>
       );
     }
 
-    if (activeService) {
+    // 2. Chi siamo
+    if (currentPage === 'about') {
       return (
         <motion.div
-          key={activeService.id}
+          key="about"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
         >
-          <ServiceLandingPage service={activeService} setCurrentPage={setCurrentPage} />
+          <AboutView setCurrentPage={setCurrentPage} />
         </motion.div>
       );
     }
 
+    // 3. Contatti
+    if (currentPage === 'contact') {
+      return (
+        <motion.div
+          key="contact"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <ContactView setCurrentPage={setCurrentPage} />
+        </motion.div>
+      );
+    }
+
+    // 4. Atelier Capelli (One-page: Taglio & Styling, Colore, Hair Integration)
+    if (currentPage === 'atelier-capelli') {
+      return (
+        <motion.div
+          key="atelier-capelli"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <AtelierCapelliView setCurrentPage={setCurrentPage} />
+        </motion.div>
+      );
+    }
+
+    // 5. Sposa & Immagine (One-page: Sposa, Consulenza)
+    if (currentPage === 'sposa-immagine') {
+      return (
+        <motion.div
+          key="sposa-immagine"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <SposaImmagineView setCurrentPage={setCurrentPage} />
+        </motion.div>
+      );
+    }
+
+    // 6. Gift Card
+    if (currentPage === 'gift-card') {
+      return (
+        <motion.div
+          key="gift-card"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <GiftCardView setCurrentPage={setCurrentPage} />
+        </motion.div>
+      );
+    }
+
+    // 7. Corsi
+    if (currentPage === 'corsi' || currentPage === 'academy') {
+      return (
+        <motion.div
+          key="corsi"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <CorsiView setCurrentPage={setCurrentPage} />
+        </motion.div>
+      );
+    }
+
+    // 8. Prenota ora
     if (currentPage === 'booking') {
       return (
         <motion.div
@@ -57,10 +140,9 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
           className="pt-24 min-h-screen bg-neutral-950"
         >
-          {/* Booking Page Hero Section */}
           <div className="relative h-[40vh] flex items-center justify-center overflow-hidden border-b border-neutral-900">
             <div className="absolute inset-0">
               <img
@@ -89,16 +171,17 @@ export default function App() {
       );
     }
 
-    if (currentPage === 'about') {
+    // Fallback for any legacy service direct navigation
+    if (activeService) {
       return (
         <motion.div
-          key="about"
+          key={activeService.id}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
         >
-          <AboutView setCurrentPage={setCurrentPage} />
+          <ServiceLandingPage service={activeService} setCurrentPage={setCurrentPage} />
         </motion.div>
       );
     }

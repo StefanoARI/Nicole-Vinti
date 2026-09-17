@@ -53,68 +53,56 @@ export default function Footer({ setCurrentPage, openPrivacyModal }: FooterProps
           {/* Colonna Servizi */}
           <div className="lg:col-span-2">
             <h3 className="text-sm font-semibold text-white tracking-[0.15em] uppercase mb-5 font-serif">
-              Mondo Nicole Vinti
+              Navigazione & Pagine
             </h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
               <button
-                onClick={() => handleNav('hair-design')}
-                className="hover:text-amber-300 transition-colors text-left"
+                onClick={() => handleNav('home')}
+                className="hover:text-amber-300 transition-colors text-left text-neutral-300"
               >
-                Cut & Styling
+                Home
               </button>
               <button
-                onClick={() => handleNav('beauty-hairspa')}
-                className="hover:text-amber-300 transition-colors text-left"
+                onClick={() => handleNav('about')}
+                className="hover:text-amber-300 transition-colors text-left text-neutral-300"
               >
-                Beauty & Hairspa
+                Chi Siamo
               </button>
               <button
-                onClick={() => handleNav('color')}
-                className="hover:text-amber-300 transition-colors text-left"
+                onClick={() => handleNav('atelier-capelli')}
+                className="hover:text-amber-300 transition-colors text-left text-neutral-300"
               >
-                Colore d'Autore
+                Atelier Capelli
               </button>
               <button
-                onClick={() => handleNav('concept-store')}
-                className="hover:text-amber-300 transition-colors text-left"
+                onClick={() => handleNav('sposa-immagine')}
+                className="hover:text-amber-300 transition-colors text-left text-neutral-300"
               >
-                Concept Store
+                Sposa & Immagine
               </button>
               <button
-                onClick={() => handleNav('hair-integration')}
-                className="hover:text-amber-300 transition-colors text-left"
-              >
-                Hair Integration
-              </button>
-              <button
-                onClick={() => handleNav('abbigliamento')}
-                className="hover:text-amber-300 transition-colors text-left"
-              >
-                Abbigliamento
-              </button>
-              <button
-                onClick={() => handleNav('barber-shop')}
-                className="hover:text-amber-300 transition-colors text-left"
-              >
-                Barber Shop
-              </button>
-              <button
-                onClick={() => handleNav('bridal')}
-                className="hover:text-amber-300 transition-colors text-left"
-              >
-                Sposa & Bridal
-              </button>
-              <button
-                onClick={() => handleNav('consulting')}
-                className="hover:text-amber-300 transition-colors text-left"
-              >
-                Consulenza Immagine
-              </button>
-              <button
-                onClick={() => handleNav('academy')}
+                onClick={() => handleNav('gift-card')}
                 className="hover:text-amber-300 transition-colors text-left text-amber-400 font-medium"
               >
-                Academy & Corsi ★
+                Gift Card ★
+              </button>
+              <button
+                onClick={() => handleNav('corsi')}
+                className="hover:text-amber-300 transition-colors text-left text-amber-400 font-medium"
+              >
+                Corsi & Academy ★
+              </button>
+              <button
+                onClick={() => handleNav('contact')}
+                className="hover:text-amber-300 transition-colors text-left text-neutral-300"
+              >
+                Contatti
+              </button>
+              <button
+                onClick={() => handleNav('booking')}
+                className="hover:text-amber-300 transition-colors text-left text-neutral-300"
+              >
+                Prenota Ora
               </button>
             </div>
           </div>

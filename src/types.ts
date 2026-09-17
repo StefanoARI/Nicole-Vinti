@@ -3,7 +3,25 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export type PageId = 'home' | 'bridal' | 'hair-design' | 'color' | 'consulting' | 'booking' | 'about' | 'concept-store' | 'beauty-hairspa' | 'hair-integration' | 'abbigliamento' | 'barber-shop' | 'academy';
+export type PageId =
+  | 'home'
+  | 'about'
+  | 'contact'
+  | 'atelier-capelli'
+  | 'sposa-immagine'
+  | 'gift-card'
+  | 'corsi'
+  | 'booking'
+  | 'bridal'
+  | 'hair-design'
+  | 'color'
+  | 'consulting'
+  | 'concept-store'
+  | 'beauty-hairspa'
+  | 'hair-integration'
+  | 'abbigliamento'
+  | 'barber-shop'
+  | 'academy';
 
 export interface FAQItem {
   question: string;
