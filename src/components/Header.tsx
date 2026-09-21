@@ -78,33 +78,33 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
               : 'max-w-7xl px-4 sm:px-6 lg:px-8 py-6 border-b border-neutral-900/40 bg-neutral-950/40'
           }`}
         >
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-2 lg:gap-4 flex-nowrap">
             {/* Logo */}
             <div
               id="logo-container"
               onClick={() => handleNavClick('home')}
-              className="cursor-pointer flex flex-col group"
+              className="cursor-pointer flex flex-col group shrink-0"
             >
-              <span className="text-base sm:text-lg font-serif font-bold tracking-[0.18em] text-amber-100 transition-colors group-hover:text-amber-300 uppercase">
+              <span className="text-base sm:text-lg font-serif font-bold tracking-[0.18em] text-amber-100 transition-colors group-hover:text-amber-300 uppercase whitespace-nowrap">
                 NICOLE VINTI
               </span>
-              <span className="text-[7.5px] font-mono tracking-[0.25em] text-neutral-400 group-hover:text-amber-100 uppercase transition-all duration-300">
+              <span className="text-[7.5px] font-mono tracking-[0.22em] text-neutral-400 group-hover:text-amber-100 uppercase transition-all duration-300 whitespace-nowrap">
                 ATELIER & BRIDAL COUTURE
               </span>
             </div>
 
             {/* Desktop Navigation */}
-            <nav id="desktop-nav" className="hidden xl:flex items-center space-x-2 2xl:space-x-4">
+            <nav id="desktop-nav" className="hidden lg:flex items-center space-x-1 lg:space-x-1.5 xl:space-x-2.5 2xl:space-x-4 shrink-0 flex-nowrap">
               {/* 1. Home */}
               <button
                 onClick={() => handleNavClick('home')}
-                className={`text-xs tracking-[0.12em] transition-all duration-200 uppercase relative py-1 px-2.5 ${
+                className={`text-[11px] xl:text-xs tracking-[0.08em] xl:tracking-[0.12em] transition-all duration-200 uppercase relative py-1 px-2 xl:px-2.5 whitespace-nowrap shrink-0 ${
                   currentPage === 'home'
                     ? 'text-amber-300 font-semibold'
                     : 'text-neutral-400 hover:text-white'
                 }`}
               >
-                Home
+                <span className="whitespace-nowrap">Home</span>
                 {currentPage === 'home' && (
                   <motion.div
                     layoutId="activeNavDot"
@@ -117,13 +117,13 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
               {/* 2. Chi siamo */}
               <button
                 onClick={() => handleNavClick('about')}
-                className={`text-xs tracking-[0.12em] transition-all duration-200 uppercase relative py-1 px-2.5 ${
+                className={`text-[11px] xl:text-xs tracking-[0.08em] xl:tracking-[0.12em] transition-all duration-200 uppercase relative py-1 px-2 xl:px-2.5 whitespace-nowrap shrink-0 ${
                   currentPage === 'about'
                     ? 'text-amber-300 font-semibold'
                     : 'text-neutral-400 hover:text-white'
                 }`}
               >
-                Chi Siamo
+                <span className="whitespace-nowrap">Chi Siamo</span>
                 {currentPage === 'about' && (
                   <motion.div
                     layoutId="activeNavDot"
@@ -135,28 +135,28 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
 
               {/* 3. Atelier Capelli (Dropdown con sottolink) */}
               <div
-                className="relative"
+                className="relative shrink-0"
                 onMouseEnter={() => setActiveDropdown('atelier')}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <div className="flex items-center">
+                <div className="flex items-center flex-nowrap">
                   <button
                     onClick={() => handleNavClick('atelier-capelli')}
-                    className={`text-xs tracking-[0.12em] transition-all duration-200 uppercase py-2 pl-2.5 pr-1 flex items-center gap-1 ${
+                    className={`text-[11px] xl:text-xs tracking-[0.08em] xl:tracking-[0.12em] transition-all duration-200 uppercase py-2 pl-2 xl:pl-2.5 pr-0.5 flex items-center gap-1 whitespace-nowrap shrink-0 ${
                       isAtelierActive
                         ? 'text-amber-300 font-semibold'
                         : 'text-neutral-400 hover:text-white'
                     }`}
                   >
-                    <span>Atelier Capelli</span>
+                    <span className="whitespace-nowrap">Atelier Capelli</span>
                   </button>
                   <button
                     onClick={() => setActiveDropdown(activeDropdown === 'atelier' ? null : 'atelier')}
-                    className="p-1 text-neutral-500 hover:text-amber-300 transition-colors"
+                    className="p-1 text-neutral-500 hover:text-amber-300 transition-colors shrink-0"
                     aria-label="Apri sottomenu Atelier Capelli"
                   >
                     <ChevronDown
-                      className={`w-3.5 h-3.5 transition-transform duration-300 ${
+                      className={`w-3.5 h-3.5 transition-transform duration-300 shrink-0 ${
                         activeDropdown === 'atelier' ? 'rotate-180 text-amber-300' : ''
                       }`}
                     />
@@ -176,10 +176,10 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                         onClick={() => handleNavClick('atelier-capelli', 'taglio-styling')}
                         className="w-full text-left p-2.5 rounded-xl transition-all flex flex-col hover:bg-neutral-900/70 border-l-2 border-transparent hover:border-amber-500"
                       >
-                        <span className="text-xs uppercase tracking-wider font-medium text-neutral-200 hover:text-amber-300">
+                        <span className="text-xs uppercase tracking-wider font-medium text-neutral-200 hover:text-amber-300 whitespace-nowrap">
                           Taglio e Styling
                         </span>
-                        <span className="text-[10px] text-neutral-500 font-light mt-0.5">
+                        <span className="text-[10px] text-neutral-500 font-light mt-0.5 whitespace-nowrap">
                           Bespoke Dry Cut & piega sculpt
                         </span>
                       </button>
@@ -188,10 +188,10 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                         onClick={() => handleNavClick('atelier-capelli', 'colore')}
                         className="w-full text-left p-2.5 rounded-xl transition-all flex flex-col hover:bg-neutral-900/70 border-l-2 border-transparent hover:border-amber-500"
                       >
-                        <span className="text-xs uppercase tracking-wider font-medium text-neutral-200 hover:text-amber-300">
+                        <span className="text-xs uppercase tracking-wider font-medium text-neutral-200 hover:text-amber-300 whitespace-nowrap">
                           Colore
                         </span>
-                        <span className="text-[10px] text-neutral-500 font-light mt-0.5">
+                        <span className="text-[10px] text-neutral-500 font-light mt-0.5 whitespace-nowrap">
                           French Balayage deluxe & gloss
                         </span>
                       </button>
@@ -200,10 +200,10 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                         onClick={() => handleNavClick('atelier-capelli', 'hair-integration')}
                         className="w-full text-left p-2.5 rounded-xl transition-all flex flex-col hover:bg-neutral-900/70 border-l-2 border-transparent hover:border-amber-500"
                       >
-                        <span className="text-xs uppercase tracking-wider font-medium text-neutral-200 hover:text-amber-300">
+                        <span className="text-xs uppercase tracking-wider font-medium text-neutral-200 hover:text-amber-300 whitespace-nowrap">
                           Hair Integration
                         </span>
-                        <span className="text-[10px] text-neutral-500 font-light mt-0.5">
+                        <span className="text-[10px] text-neutral-500 font-light mt-0.5 whitespace-nowrap">
                           Allungamento e infoltimento invisibile
                         </span>
                       </button>
@@ -214,28 +214,28 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
 
               {/* 4. Sposa & Immagine (Dropdown con sottolink) */}
               <div
-                className="relative"
+                className="relative shrink-0"
                 onMouseEnter={() => setActiveDropdown('sposa')}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <div className="flex items-center">
+                <div className="flex items-center flex-nowrap">
                   <button
                     onClick={() => handleNavClick('sposa-immagine')}
-                    className={`text-xs tracking-[0.12em] transition-all duration-200 uppercase py-2 pl-2.5 pr-1 flex items-center gap-1 ${
+                    className={`text-[11px] xl:text-xs tracking-[0.08em] xl:tracking-[0.12em] transition-all duration-200 uppercase py-2 pl-2 xl:pl-2.5 pr-0.5 flex items-center gap-1 whitespace-nowrap shrink-0 ${
                       isSposaActive
                         ? 'text-amber-300 font-semibold'
                         : 'text-neutral-400 hover:text-white'
                     }`}
                   >
-                    <span>Sposa & Immagine</span>
+                    <span className="whitespace-nowrap">Sposa & Immagine</span>
                   </button>
                   <button
                     onClick={() => setActiveDropdown(activeDropdown === 'sposa' ? null : 'sposa')}
-                    className="p-1 text-neutral-500 hover:text-amber-300 transition-colors"
+                    className="p-1 text-neutral-500 hover:text-amber-300 transition-colors shrink-0"
                     aria-label="Apri sottomenu Sposa & Immagine"
                   >
                     <ChevronDown
-                      className={`w-3.5 h-3.5 transition-transform duration-300 ${
+                      className={`w-3.5 h-3.5 transition-transform duration-300 shrink-0 ${
                         activeDropdown === 'sposa' ? 'rotate-180 text-amber-300' : ''
                       }`}
                     />
@@ -255,10 +255,10 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                         onClick={() => handleNavClick('sposa-immagine', 'sposa')}
                         className="w-full text-left p-2.5 rounded-xl transition-all flex flex-col hover:bg-neutral-900/70 border-l-2 border-transparent hover:border-amber-500"
                       >
-                        <span className="text-xs uppercase tracking-wider font-medium text-neutral-200 hover:text-amber-300">
+                        <span className="text-xs uppercase tracking-wider font-medium text-neutral-200 hover:text-amber-300 whitespace-nowrap">
                           Sposa
                         </span>
-                        <span className="text-[10px] text-neutral-500 font-light mt-0.5">
+                        <span className="text-[10px] text-neutral-500 font-light mt-0.5 whitespace-nowrap">
                           Acconciatura couture & supporto on-site
                         </span>
                       </button>
@@ -267,10 +267,10 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                         onClick={() => handleNavClick('sposa-immagine', 'consulenza')}
                         className="w-full text-left p-2.5 rounded-xl transition-all flex flex-col hover:bg-neutral-900/70 border-l-2 border-transparent hover:border-amber-500"
                       >
-                        <span className="text-xs uppercase tracking-wider font-medium text-neutral-200 hover:text-amber-300">
+                        <span className="text-xs uppercase tracking-wider font-medium text-neutral-200 hover:text-amber-300 whitespace-nowrap">
                           Consulenza
                         </span>
-                        <span className="text-[10px] text-neutral-500 font-light mt-0.5">
+                        <span className="text-[10px] text-neutral-500 font-light mt-0.5 whitespace-nowrap">
                           Armocromia e facial shape
                         </span>
                       </button>
@@ -282,13 +282,13 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
               {/* 5. Gift Card */}
               <button
                 onClick={() => handleNavClick('gift-card')}
-                className={`text-xs tracking-[0.12em] transition-all duration-200 uppercase relative py-1 px-2.5 ${
+                className={`text-[11px] xl:text-xs tracking-[0.08em] xl:tracking-[0.12em] transition-all duration-200 uppercase relative py-1 px-2 xl:px-2.5 whitespace-nowrap shrink-0 ${
                   currentPage === 'gift-card'
                     ? 'text-amber-300 font-semibold'
                     : 'text-neutral-400 hover:text-white'
                 }`}
               >
-                Gift Card
+                <span className="whitespace-nowrap">Gift Card</span>
                 {currentPage === 'gift-card' && (
                   <motion.div
                     layoutId="activeNavDot"
@@ -301,13 +301,13 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
               {/* 6. Corsi */}
               <button
                 onClick={() => handleNavClick('corsi')}
-                className={`text-xs tracking-[0.12em] transition-all duration-200 uppercase relative py-1 px-2.5 ${
+                className={`text-[11px] xl:text-xs tracking-[0.08em] xl:tracking-[0.12em] transition-all duration-200 uppercase relative py-1 px-2 xl:px-2.5 whitespace-nowrap shrink-0 ${
                   currentPage === 'corsi' || currentPage === 'academy'
                     ? 'text-amber-300 font-semibold'
                     : 'text-neutral-400 hover:text-white'
                 }`}
               >
-                Corsi
+                <span className="whitespace-nowrap">Corsi</span>
                 {(currentPage === 'corsi' || currentPage === 'academy') && (
                   <motion.div
                     layoutId="activeNavDot"
@@ -320,13 +320,13 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
               {/* 7. Contatti */}
               <button
                 onClick={() => handleNavClick('contact')}
-                className={`text-xs tracking-[0.12em] transition-all duration-200 uppercase relative py-1 px-2.5 ${
+                className={`text-[11px] xl:text-xs tracking-[0.08em] xl:tracking-[0.12em] transition-all duration-200 uppercase relative py-1 px-2 xl:px-2.5 whitespace-nowrap shrink-0 ${
                   currentPage === 'contact'
                     ? 'text-amber-300 font-semibold'
                     : 'text-neutral-400 hover:text-white'
                 }`}
               >
-                Contatti
+                <span className="whitespace-nowrap">Contatti</span>
                 {currentPage === 'contact' && (
                   <motion.div
                     layoutId="activeNavDot"
@@ -338,43 +338,43 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
             </nav>
 
             {/* Desktop CTA: Prenota Ora */}
-            <div id="desktop-cta" className="hidden lg:flex items-center space-x-3">
+            <div id="desktop-cta" className="hidden lg:flex items-center space-x-2 xl:space-x-3 shrink-0 flex-nowrap">
               <a
                 href={`tel:${SALON_INFO.phone.replace(/\s+/g, '')}`}
-                className="hidden 2xl:flex items-center space-x-1.5 text-neutral-400 hover:text-amber-200 text-xs tracking-[0.05em] transition-colors pr-2"
+                className="hidden 2xl:flex items-center space-x-1.5 text-neutral-400 hover:text-amber-200 text-xs tracking-[0.05em] transition-colors pr-1 whitespace-nowrap shrink-0"
               >
-                <Phone className="w-3.5 h-3.5 text-amber-500" />
-                <span>{SALON_INFO.phone}</span>
+                <Phone className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                <span className="whitespace-nowrap">{SALON_INFO.phone}</span>
               </a>
               <button
                 onClick={() => handleNavClick('booking')}
-                className={`px-5 py-2.5 text-xs font-bold uppercase tracking-[0.15em] rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex items-center space-x-2 ${
+                className={`px-3.5 xl:px-5 py-2 xl:py-2.5 text-[11px] xl:text-xs font-bold uppercase tracking-[0.12em] xl:tracking-[0.15em] rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex items-center space-x-1.5 xl:space-x-2 whitespace-nowrap shrink-0 ${
                   currentPage === 'booking'
                     ? 'bg-amber-400 text-neutral-950 ring-2 ring-amber-300'
                     : 'bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-neutral-950 hover:shadow-amber-500/20'
                 }`}
               >
-                <Calendar className="w-3.5 h-3.5" />
-                <span>Prenota Ora</span>
+                <Calendar className="w-3.5 h-3.5 shrink-0" />
+                <span className="whitespace-nowrap">Prenota Ora</span>
               </button>
             </div>
 
             {/* Mobile Menu Toggle & Direct Booking Icon */}
-            <div className="flex xl:hidden items-center space-x-2.5">
+            <div className="flex lg:hidden items-center space-x-2 shrink-0 flex-nowrap">
               <button
                 onClick={() => handleNavClick('booking')}
-                className="bg-amber-500 hover:bg-amber-600 text-neutral-950 p-2 rounded-full transition-colors shadow-md flex items-center gap-1.5 px-3"
+                className="bg-amber-500 hover:bg-amber-600 text-neutral-950 p-2 rounded-full transition-colors shadow-md flex items-center gap-1.5 px-3 whitespace-nowrap shrink-0"
                 title="Prenota"
               >
-                <Calendar className="w-3.5 h-3.5" />
-                <span className="text-[11px] font-bold uppercase tracking-wider">Prenota</span>
+                <Calendar className="w-3.5 h-3.5 shrink-0" />
+                <span className="text-[11px] font-bold uppercase tracking-wider whitespace-nowrap">Prenota</span>
               </button>
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-neutral-300 hover:text-white focus:outline-none p-2 rounded-full hover:bg-neutral-900 transition-colors"
+                className="text-neutral-300 hover:text-white focus:outline-none p-2 rounded-full hover:bg-neutral-900 transition-colors shrink-0"
                 aria-label="Toggle menu"
               >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isOpen ? <X className="w-6 h-6 shrink-0" /> : <Menu className="w-6 h-6 shrink-0" />}
               </button>
             </div>
           </div>
@@ -389,13 +389,13 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.96, y: -8 }}
               transition={{ duration: 0.22, ease: 'easeOut' }}
-              className="xl:hidden absolute top-full left-4 right-4 mt-2 bg-neutral-950/95 backdrop-blur-2xl border border-neutral-800/80 rounded-3xl shadow-2xl py-6 px-5 space-y-3 flex flex-col max-h-[82vh] overflow-y-auto"
+              className="lg:hidden absolute top-full left-4 right-4 mt-2 bg-neutral-950/95 backdrop-blur-2xl border border-neutral-800/80 rounded-3xl shadow-2xl py-6 px-5 space-y-3 flex flex-col max-h-[82vh] overflow-y-auto"
             >
               <div className="flex flex-col space-y-1">
                 {/* 1. Home */}
                 <button
                   onClick={() => handleNavClick('home')}
-                  className={`text-left text-sm tracking-[0.15em] uppercase py-2.5 px-4 rounded-xl transition-all ${
+                  className={`text-left text-sm tracking-[0.15em] uppercase py-2.5 px-4 rounded-xl transition-all whitespace-nowrap ${
                     currentPage === 'home'
                       ? 'text-amber-300 font-semibold bg-amber-500/10'
                       : 'text-neutral-400 hover:text-white hover:bg-neutral-900'
@@ -407,7 +407,7 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 {/* 2. Chi siamo */}
                 <button
                   onClick={() => handleNavClick('about')}
-                  className={`text-left text-sm tracking-[0.15em] uppercase py-2.5 px-4 rounded-xl transition-all ${
+                  className={`text-left text-sm tracking-[0.15em] uppercase py-2.5 px-4 rounded-xl transition-all whitespace-nowrap ${
                     currentPage === 'about'
                       ? 'text-amber-300 font-semibold bg-amber-500/10'
                       : 'text-neutral-400 hover:text-white hover:bg-neutral-900'
@@ -421,7 +421,7 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                   <div className="flex items-center justify-between rounded-xl hover:bg-neutral-900">
                     <button
                       onClick={() => handleNavClick('atelier-capelli')}
-                      className={`flex-1 text-left text-sm tracking-[0.15em] uppercase py-2.5 px-4 ${
+                      className={`flex-1 text-left text-sm tracking-[0.15em] uppercase py-2.5 px-4 whitespace-nowrap ${
                         isAtelierActive ? 'text-amber-300 font-semibold' : 'text-neutral-400 hover:text-white'
                       }`}
                     >
@@ -429,10 +429,10 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                     </button>
                     <button
                       onClick={() => setOpenMobileDropdown(openMobileDropdown === 'atelier' ? null : 'atelier')}
-                      className="p-2.5 text-neutral-500 hover:text-amber-300"
+                      className="p-2.5 text-neutral-500 hover:text-amber-300 shrink-0"
                     >
                       <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-300 ${
+                        className={`w-4 h-4 transition-transform duration-300 shrink-0 ${
                           openMobileDropdown === 'atelier' ? 'rotate-180 text-amber-300' : ''
                         }`}
                       />
@@ -450,19 +450,19 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                       >
                         <button
                           onClick={() => handleNavClick('atelier-capelli', 'taglio-styling')}
-                          className="w-full text-left py-2 px-3 text-xs uppercase tracking-wider text-neutral-300 hover:text-amber-300 rounded-lg"
+                          className="w-full text-left py-2 px-3 text-xs uppercase tracking-wider text-neutral-300 hover:text-amber-300 rounded-lg whitespace-nowrap"
                         >
                           ↳ Taglio e Styling
                         </button>
                         <button
                           onClick={() => handleNavClick('atelier-capelli', 'colore')}
-                          className="w-full text-left py-2 px-3 text-xs uppercase tracking-wider text-neutral-300 hover:text-amber-300 rounded-lg"
+                          className="w-full text-left py-2 px-3 text-xs uppercase tracking-wider text-neutral-300 hover:text-amber-300 rounded-lg whitespace-nowrap"
                         >
                           ↳ Colore
                         </button>
                         <button
                           onClick={() => handleNavClick('atelier-capelli', 'hair-integration')}
-                          className="w-full text-left py-2 px-3 text-xs uppercase tracking-wider text-neutral-300 hover:text-amber-300 rounded-lg"
+                          className="w-full text-left py-2 px-3 text-xs uppercase tracking-wider text-neutral-300 hover:text-amber-300 rounded-lg whitespace-nowrap"
                         >
                           ↳ Hair Integration
                         </button>
@@ -476,7 +476,7 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                   <div className="flex items-center justify-between rounded-xl hover:bg-neutral-900">
                     <button
                       onClick={() => handleNavClick('sposa-immagine')}
-                      className={`flex-1 text-left text-sm tracking-[0.15em] uppercase py-2.5 px-4 ${
+                      className={`flex-1 text-left text-sm tracking-[0.15em] uppercase py-2.5 px-4 whitespace-nowrap ${
                         isSposaActive ? 'text-amber-300 font-semibold' : 'text-neutral-400 hover:text-white'
                       }`}
                     >
@@ -484,10 +484,10 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                     </button>
                     <button
                       onClick={() => setOpenMobileDropdown(openMobileDropdown === 'sposa' ? null : 'sposa')}
-                      className="p-2.5 text-neutral-500 hover:text-amber-300"
+                      className="p-2.5 text-neutral-500 hover:text-amber-300 shrink-0"
                     >
                       <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-300 ${
+                        className={`w-4 h-4 transition-transform duration-300 shrink-0 ${
                           openMobileDropdown === 'sposa' ? 'rotate-180 text-amber-300' : ''
                         }`}
                       />
@@ -505,13 +505,13 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                       >
                         <button
                           onClick={() => handleNavClick('sposa-immagine', 'sposa')}
-                          className="w-full text-left py-2 px-3 text-xs uppercase tracking-wider text-neutral-300 hover:text-amber-300 rounded-lg"
+                          className="w-full text-left py-2 px-3 text-xs uppercase tracking-wider text-neutral-300 hover:text-amber-300 rounded-lg whitespace-nowrap"
                         >
                           ↳ Sposa
                         </button>
                         <button
                           onClick={() => handleNavClick('sposa-immagine', 'consulenza')}
-                          className="w-full text-left py-2 px-3 text-xs uppercase tracking-wider text-neutral-300 hover:text-amber-300 rounded-lg"
+                          className="w-full text-left py-2 px-3 text-xs uppercase tracking-wider text-neutral-300 hover:text-amber-300 rounded-lg whitespace-nowrap"
                         >
                           ↳ Consulenza
                         </button>
@@ -523,7 +523,7 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 {/* 5. Gift Card */}
                 <button
                   onClick={() => handleNavClick('gift-card')}
-                  className={`text-left text-sm tracking-[0.15em] uppercase py-2.5 px-4 rounded-xl transition-all ${
+                  className={`text-left text-sm tracking-[0.15em] uppercase py-2.5 px-4 rounded-xl transition-all whitespace-nowrap ${
                     currentPage === 'gift-card'
                       ? 'text-amber-300 font-semibold bg-amber-500/10'
                       : 'text-neutral-400 hover:text-white hover:bg-neutral-900'
@@ -535,7 +535,7 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 {/* 6. Corsi */}
                 <button
                   onClick={() => handleNavClick('corsi')}
-                  className={`text-left text-sm tracking-[0.15em] uppercase py-2.5 px-4 rounded-xl transition-all ${
+                  className={`text-left text-sm tracking-[0.15em] uppercase py-2.5 px-4 rounded-xl transition-all whitespace-nowrap ${
                     currentPage === 'corsi' || currentPage === 'academy'
                       ? 'text-amber-300 font-semibold bg-amber-500/10'
                       : 'text-neutral-400 hover:text-white hover:bg-neutral-900'
@@ -547,7 +547,7 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 {/* 7. Contatti */}
                 <button
                   onClick={() => handleNavClick('contact')}
-                  className={`text-left text-sm tracking-[0.15em] uppercase py-2.5 px-4 rounded-xl transition-all ${
+                  className={`text-left text-sm tracking-[0.15em] uppercase py-2.5 px-4 rounded-xl transition-all whitespace-nowrap ${
                     currentPage === 'contact'
                       ? 'text-amber-300 font-semibold bg-amber-500/10'
                       : 'text-neutral-400 hover:text-white hover:bg-neutral-900'
@@ -562,10 +562,10 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
               {/* Mobile Call to Action */}
               <button
                 onClick={() => handleNavClick('booking')}
-                className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-neutral-950 font-bold text-xs tracking-[0.15em] uppercase py-4 text-center transition-all duration-300 rounded-full shadow-lg flex items-center justify-center gap-2"
+                className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-neutral-950 font-bold text-xs tracking-[0.15em] uppercase py-4 text-center transition-all duration-300 rounded-full shadow-lg flex items-center justify-center gap-2 whitespace-nowrap"
               >
-                <Calendar className="w-4 h-4" />
-                <span>Prenota Ora</span>
+                <Calendar className="w-4 h-4 shrink-0" />
+                <span className="whitespace-nowrap">Prenota Ora</span>
               </button>
             </motion.div>
           )}
