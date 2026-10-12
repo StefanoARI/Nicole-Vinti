@@ -83,14 +83,22 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
             <div
               id="logo-container"
               onClick={() => handleNavClick('home')}
-              className="cursor-pointer flex flex-col group shrink-0"
+              className="cursor-pointer flex items-center space-x-2 group shrink-0"
             >
-              <span className="text-base sm:text-lg font-serif font-bold tracking-[0.18em] text-amber-100 transition-colors group-hover:text-amber-300 uppercase whitespace-nowrap">
-                NICOLE VINTI
-              </span>
-              <span className="text-[7.5px] font-mono tracking-[0.22em] text-neutral-400 group-hover:text-amber-100 uppercase transition-all duration-300 whitespace-nowrap">
-                ATELIER & BRIDAL COUTURE
-              </span>
+              <img
+                src="https://www.nicolevinti.it/images/logo.png"
+                alt="Nicole Vinti Logo"
+                className="h-6 sm:h-7 w-auto object-contain brightness-125 contrast-125 shrink-0"
+                referrerPolicy="no-referrer"
+              />
+              <div className="flex flex-col">
+                <span className="text-xs sm:text-sm font-serif font-bold tracking-[0.15em] text-amber-100 transition-colors group-hover:text-amber-300 uppercase whitespace-nowrap">
+                  NICOLE VINTI
+                </span>
+                <span className="text-[6.5px] font-mono tracking-[0.2em] text-neutral-400 group-hover:text-amber-100 uppercase transition-all duration-300 whitespace-nowrap">
+                  ATELIER & BRIDAL
+                </span>
+              </div>
             </div>
 
             {/* Desktop Navigation */}

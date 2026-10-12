@@ -6,11 +6,55 @@
 import { ServiceDetail, InstagramPost, Testimonial } from './types';
 
 export const IMAGE_PATHS = {
-  nicoleVinti: new URL('./assets/images/nicole_vinti_1783953179962.jpg', import.meta.url).href,
-  bridalUpdo: new URL('./assets/images/bridal_updo_1783953200731.jpg', import.meta.url).href,
-  bridalWaves: new URL('./assets/images/bridal_waves_1783953224039.jpg', import.meta.url).href,
-  blondeBalayage: new URL('./assets/images/blonde_balayage_1783953245171.jpg', import.meta.url).href,
-  salonInterior: new URL('./assets/images/salon_interior_1783953266036.jpg', import.meta.url).href,
+  logo: 'https://www.nicolevinti.it/images/logo.png',
+  nicoleVinti: 'https://100100siti.it/Vinti/Nicole1.jpg',
+  bridalUpdo: 'https://www.nicolevinti.it/uploads/image/wedding-img1.jpg',
+  bridalWaves: 'https://www.nicolevinti.it/uploads/image/wedding-img5.jpg',
+  blondeBalayage: 'https://100100siti.it/Vinti/Acconciature01.jpg',
+  salonInterior: 'https://www.nicolevinti.it/uploads/image/homepage-banner.jpg',
+
+  salone: [
+    'https://www.nicolevinti.it/uploads/image/homepage-banner.jpg',
+    'https://www.nicolevinti.it/uploads/image/concept-2_1.jpg',
+    'https://www.nicolevinti.it/uploads/image/concept-4_1.jpg',
+    'https://www.nicolevinti.it/uploads/image/concept-5_1.jpg',
+    'https://100100siti.it/Vinti/Salone%201.jpg',
+    'https://100100siti.it/Vinti/Salone%203.jpg',
+    'https://100100siti.it/Vinti/Salone.jpg',
+  ],
+  nicole: [
+    'https://100100siti.it/Vinti/Nicole1%20(1).jpg',
+    'https://100100siti.it/Vinti/Nicole1.jpg',
+    'https://100100siti.it/Vinti/Nicole2%20(1).jpg',
+    'https://100100siti.it/Vinti/Nicole2.jpg',
+    'https://100100siti.it/Vinti/Nicole3%20(1).jpg',
+    'https://100100siti.it/Vinti/Nicole3.jpg',
+    'https://100100siti.it/Vinti/Nicole4.jpg',
+    'https://100100siti.it/Vinti/Nicole5.jpg',
+    'https://100100siti.it/Vinti/Nicole6.jpg',
+  ],
+  acconciature: [
+    'https://100100siti.it/Vinti/Acconciature01.jpg',
+    'https://100100siti.it/Vinti/Acconciature02.jpg',
+    'https://100100siti.it/Vinti/Acconciature03.jpg',
+    'https://100100siti.it/Vinti/Acconciature04.jpg',
+    'https://100100siti.it/Vinti/Acconciature05.jpg',
+    'https://100100siti.it/Vinti/Acconciature06.jpg',
+    'https://100100siti.it/Vinti/Acconciature07.jpg',
+    'https://100100siti.it/Vinti/Acconciature08.jpg',
+    'https://100100siti.it/Vinti/Acconciature09.jpg',
+    'https://100100siti.it/Vinti/Acconciature10.jpg',
+    'https://100100siti.it/Vinti/Acconciature11.jpg',
+    'https://100100siti.it/Vinti/Acconciature12.jpg',
+  ],
+  wedding: [
+    'https://www.nicolevinti.it/uploads/image/wedding-img5.jpg',
+    'https://www.nicolevinti.it/uploads/image/wedding-img1.jpg',
+    'https://www.nicolevinti.it/uploads/image/wedding-img2.jpg',
+    'https://www.nicolevinti.it/uploads/image/wedding-img6.jpg',
+    'https://www.nicolevinti.it/uploads/image/weddinf-img3.jpg',
+    'https://www.nicolevinti.it/uploads/image/045.JPG',
+  ]
 };
 
 export const SERVICES_DATA: ServiceDetail[] = [
@@ -19,7 +63,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: 'Bridal Experience',
     subtitle: 'Acconciature Sposa Bespoke',
     shortDesc: 'Il tuo sogno di bellezza prende vita. Un servizio esclusivo e personalizzato per creare l\'acconciatura perfetta, cucita sul tuo viso e sul tuo abito.',
-    image: IMAGE_PATHS.bridalWaves,
+    image: IMAGE_PATHS.wedding[0],
     problem: {
       title: 'L\'Ansia del "Giorno Più Bello"',
       description: 'Molte spose temono che la loro acconciatura non duri tutto il giorno, non valorizzi il loro viso, o peggio, che le faccia sentire a disagio o "prive di personalità" sotto i riflettori.',
@@ -55,10 +99,10 @@ export const SERVICES_DATA: ServiceDetail[] = [
     approach: 'L\'acconciatura da sposa non è semplicemente "raccogliere i capelli", ma scolpire una cornice di luce. Ogni ciocca deve assecondare il movimento naturale e catturare l\'armonia delle tue emozioni.',
     durationPrice: 'Su Preventivo Esclusivo',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1591555200813-b553b1e44452?auto=format&fit=crop&q=80&w=800', alt: 'Acconciatura Raccolta Elegante', title: 'Chignon Basso Couture' },
-      { url: 'https://images.unsplash.com/photo-1519225495810-7512c696505a?auto=format&fit=crop&q=80&w=800', alt: 'Preparazione Sposa Velo', title: 'Dettaglio con Velo' },
-      { url: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800', alt: 'Onde Morbide da Sogno', title: 'Onde Morbide Hollywoodiane' },
-      { url: 'https://images.unsplash.com/photo-1549417229-aa67d3263c09?auto=format&fit=crop&q=80&w=800', alt: 'Chignon Dettaglio', title: 'Fermaglio Gioiello ed Updo' }
+      { url: IMAGE_PATHS.wedding[0], alt: 'Acconciatura Raccolta Elegante', title: 'Chignon Basso Couture' },
+      { url: IMAGE_PATHS.wedding[1], alt: 'Preparazione Sposa Velo', title: 'Dettaglio con Velo' },
+      { url: IMAGE_PATHS.wedding[2], alt: 'Onde Morbide da Sogno', title: 'Onde Morbide Hollywoodiane' },
+      { url: IMAGE_PATHS.wedding[3], alt: 'Chignon Dettaglio', title: 'Fermaglio Gioiello ed Updo' }
     ],
     faqs: [
       { question: 'Con quanto anticipo dovrei prenotare l\'esperienza Bridal?', answer: 'Consigliamo di prenotare dai 4 ai 6 mesi prima della data del matrimonio, specialmente per i mesi di alta stagione (maggio-settembre), per assicurarvi la disponibilità esclusiva di Nicole nel vostro giorno speciale.' },
@@ -72,7 +116,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: 'Cut & Styling Couture',
     subtitle: 'Tagli Sartoriali e Piega Sculpting',
     shortDesc: 'Molto più di un semplice taglio. Definiamo la geometria ideale per il tuo volto con tagli sartoriali moderni, facili da gestire anche a casa.',
-    image: IMAGE_PATHS.bridalUpdo,
+    image: IMAGE_PATHS.acconciature[0],
     problem: {
       title: 'Capelli Senza Forma e Difficili da Gestire',
       description: 'Molte donne si lamentano di tagli che perdono la loro forma dopo pochi giorni, che appiattiscono i capelli o che richiedono ore di styling estenuante a casa per sembrare decenti.',
@@ -104,10 +148,10 @@ export const SERVICES_DATA: ServiceDetail[] = [
     approach: 'Un buon taglio deve saper "parlare" anche quando non è acconciato con piastre o ferri. La bellezza è libertà, e il tuo taglio deve darti la libertà di essere te stessa in cinque minuti.',
     durationPrice: 'A partire da €65',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=800', alt: 'Tecnica Dry Cut d\'Atelier', title: 'Taglio a Secco (Dry Cut)' },
-      { url: 'https://images.unsplash.com/photo-1605497746444-ac9dbd39f69c?auto=format&fit=crop&q=80&w=800', alt: 'Taglio Bob Moderno', title: 'Bob Lineare & Volume' },
-      { url: 'https://images.unsplash.com/photo-1595853035070-59a39fe84de3?auto=format&fit=crop&q=80&w=800', alt: 'Piega Sculpting Onde', title: 'Onde Sinuose Seta' },
-      { url: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800', alt: 'Cura e Lavaggio Sensoriale', title: 'Rituale Lavaggio Rigenerante' }
+      { url: IMAGE_PATHS.acconciature[0], alt: 'Tecnica Dry Cut d\'Atelier', title: 'Taglio a Secco (Dry Cut)' },
+      { url: IMAGE_PATHS.acconciature[1], alt: 'Taglio Bob Moderno', title: 'Bob Lineare & Volume' },
+      { url: IMAGE_PATHS.acconciature[2], alt: 'Piega Sculpting Onde', title: 'Onde Sinuose Seta' },
+      { url: IMAGE_PATHS.acconciature[3], alt: 'Cura e Lavaggio Sensoriale', title: 'Rituale Lavaggio Rigenerante' }
     ],
     faqs: [
       { question: 'Cos\'è la tecnica Bespoke Dry Cut?', answer: 'È una tecnica di taglio eseguita a capelli completamente asciutti. Ci permette di assecondare la caduta naturale della tua chioma, rispettare i volumi effettivi e creare linee personalizzate impossibili da definire a capello bagnato.' },
@@ -120,7 +164,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: 'Color & Brightness',
     subtitle: 'Balayage Deluxe e Trattamenti Rigeneranti',
     shortDesc: 'Sfumature multidimensionali che illuminano la tua pelle. Tecniche avanzate di schiaritura abbinate a trattamenti di ricostruzione molecolare.',
-    image: IMAGE_PATHS.blondeBalayage,
+    image: IMAGE_PATHS.acconciature[4],
     problem: {
       title: 'Colori Piatti, Artificiali o Capelli Rovinati',
       description: 'Il terrore di chi desidera schiarire i capelli è l\'effetto "zebrato" o artificiale, unito alla paura di bruciare e indebolire le lunghezze a causa di decolorazioni aggressive.',
@@ -152,10 +196,10 @@ export const SERVICES_DATA: ServiceDetail[] = [
     approach: 'Il colore non deve mai essere un blocco uniforme. Deve vibrare. Usiamo le ombre e le luci per scolpire la profondità, esaltando gli occhi e la carnagione come un vero quadro d\'autore.',
     durationPrice: 'A partire da €120',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1620331702289-5484cd1748f6?auto=format&fit=crop&q=80&w=800', alt: 'Balayage Honey Blonde', title: 'Honey Blonde Deluxe' },
-      { url: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&q=80&w=800', alt: 'Sfumature Effetto Sole', title: 'Sun-Kissed Golden Highlights' },
-      { url: 'https://images.unsplash.com/photo-1562322140-21b0eff3d2f6?auto=format&fit=crop&q=80&w=800', alt: 'Tonalizzazione Gloss', title: 'Trattamento Acid Gloss' },
-      { url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800', alt: 'Luminosità Estrema', title: 'Seta Multidimensionale' }
+      { url: IMAGE_PATHS.acconciature[4], alt: 'Balayage Honey Blonde', title: 'Honey Blonde Deluxe' },
+      { url: IMAGE_PATHS.acconciature[5], alt: 'Sfumature Effetto Sole', title: 'Sun-Kissed Golden Highlights' },
+      { url: IMAGE_PATHS.acconciature[6], alt: 'Tonalizzazione Gloss', title: 'Trattamento Acid Gloss' },
+      { url: IMAGE_PATHS.acconciature[7], alt: 'Luminosità Estrema', title: 'Seta Multidimensionale' }
     ],
     faqs: [
       { question: 'Qual è la differenza tra il Balayage Deluxe e le classiche meches?', answer: 'Il Balayage Deluxe viene dipinto interamente a mano libera, creando sfumature che si fondono senza stacchi netti. Questo evita l\'effetto ricrescita marcato e garantisce una transizione di colore estremamente morbida.' },
@@ -168,7 +212,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: 'Armocromia & Facial Styling',
     subtitle: 'Consulenza d\'Immagine Globale',
     shortDesc: 'Scopri il segreto della tua unicità. Un\'analisi approfondita del colore della pelle e della forma del viso per individuare la tua palette cromatica e lo stile perfetto.',
-    image: IMAGE_PATHS.nicoleVinti,
+    image: IMAGE_PATHS.nicole[0],
     problem: {
       title: 'Disorientamento di Stile e Acquisti Sbagliati',
       description: 'Molte persone passano anni a cambiare colore o taglio di capelli senza mai sentirsi davvero valorizzate, spendendo tempo e denaro in look che spengono il loro incarnato o induriscono i lineamenti.',
@@ -200,10 +244,10 @@ export const SERVICES_DATA: ServiceDetail[] = [
     approach: 'L\'armocromia non è una gabbia di regole, ma una chiave di libertà. Conoscere i propri colori amici permette di risplendere con il minimo sforzo e di valorizzare al massimo ogni singolo dettaglio estetico.',
     durationPrice: 'Consulenza Completa €150',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1506152983158-b4a74a01c721?auto=format&fit=crop&q=80&w=800', alt: 'Drappi Seta Cromatica', title: 'Draping Analisi Cromatica' },
-      { url: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=800', alt: 'Studio Proporzioni Viso', title: 'Facial Shape Analysis' },
-      { url: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=800', alt: 'Palette Colore Personalizzato', title: 'Palette Cromatica Personale' },
-      { url: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800', alt: 'Outfit Harmonization', title: 'Total Look Consulting' }
+      { url: IMAGE_PATHS.nicole[0], alt: 'Drappi Seta Cromatica', title: 'Draping Analisi Cromatica' },
+      { url: IMAGE_PATHS.nicole[1], alt: 'Studio Proporzioni Viso', title: 'Facial Shape Analysis' },
+      { url: IMAGE_PATHS.nicole[2], alt: 'Palette Colore Personalizzato', title: 'Palette Cromatica Personale' },
+      { url: IMAGE_PATHS.nicole[3], alt: 'Outfit Harmonization', title: 'Total Look Consulting' }
     ],
     faqs: [
       { question: 'Cosa devo fare prima della seduta di Armocromia?', answer: 'Per ottenere un risultato preciso al 100%, è fondamentale presentarsi alla consulenza completamente struccati e non aver effettuato lampade o trattamenti abbronzanti intensi nei giorni precedenti.' },
@@ -216,7 +260,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: 'Concept Store',
     subtitle: 'Selezione Esclusiva & Lifestyle',
     shortDesc: 'Un\'esperienza sensoriale oltre il capello. Scopri oggettistica di design, profumeria artistica e accessori rari scelti personalmente da Nicole Vinti.',
-    image: 'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=800',
+    image: IMAGE_PATHS.salone[0],
     problem: {
       title: 'La massificazione degli acquisti e il bisogno di unicità',
       description: 'Nel mondo del fast fashion e del design seriale, è sempre più difficile trovare pezzi unici, fragranze d\'autore o accessori capaci di esprimere la propria vera unicità e ricercatezza.',
@@ -248,10 +292,10 @@ export const SERVICES_DATA: ServiceDetail[] = [
     approach: 'La bellezza non si ferma ai capelli, ma pervade l\'ambiente in cui vivi e gli oggetti di cui ti circondi. Il Concept Store è il mio diario di viaggio visivo e olfattivo, condiviso con te.',
     durationPrice: 'Ingresso libero o su appuntamento per Private Shopping',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=800', alt: 'Profumi di nicchia d\'autore', title: 'Fragranze d\'Autore' },
-      { url: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=800', alt: 'Accessori e gioielli ricercati', title: 'Accessori di Design' },
-      { url: 'https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&q=80&w=800', alt: 'Candele naturali versate a mano', title: 'Candele Artigianali Aromaterapia' },
-      { url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800', alt: 'Oggetti luxury per arredamento interni', title: 'Home Decor Curated' }
+      { url: IMAGE_PATHS.salone[0], alt: 'Profumi di nicchia d\'autore', title: 'Fragranze d\'Autore' },
+      { url: IMAGE_PATHS.salone[1], alt: 'Accessori e gioielli ricercati', title: 'Accessori di Design' },
+      { url: IMAGE_PATHS.salone[2], alt: 'Candele naturali versate a mano', title: 'Candele Artigianali Aromaterapia' },
+      { url: IMAGE_PATHS.salone[3], alt: 'Oggetti luxury per arredamento interni', title: 'Home Decor Curated' }
     ],
     faqs: [
       { question: 'Posso visitare il Concept Store senza prenotare un servizio capelli?', answer: 'Assolutamente sì. Il Concept Store è aperto a tutti gli amanti della bellezza e del design. Puoi venire a trovarci durante gli orari di apertura dell\'Atelier per esplorare la collezione o per un regalo speciale.' },
@@ -264,7 +308,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: 'Beauty & Hairspa',
     subtitle: 'Rituali Rigeneranti Viso & Cute',
     shortDesc: 'Sperimenta l\'unione tra la cura estetica profonda e il relax sensoriale. Trattamenti per cuoio capelluto, massaggi ayurvedici ed estetica viso d\'avanguardia.',
-    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=800',
+    image: IMAGE_PATHS.salone[4],
     problem: {
       title: 'Stress, smog e tensioni che danneggiano pelle e capelli',
       description: 'Il cuoio capelluto è il terreno in cui nascono i tuoi capelli. Stress quotidiano, tossine ambientali e trattamenti aggressivi possono infiammarlo, causando capelli spenti, fragili o tendenti alla caduta.',
@@ -296,10 +340,10 @@ export const SERVICES_DATA: ServiceDetail[] = [
     approach: 'Trattiamo i capelli e la pelle non solo in superficie, ma andando alla radice del benessere. Un cuoio capelluto rigenerato è il segreto per capelli eternamente lucidi e forti.',
     durationPrice: 'Trattamenti a partire da €50',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=800', alt: 'Trattamento viso rigenerante', title: 'Facial Treatment Kobido' },
-      { url: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=800', alt: 'Oli essenziali naturali estratti a freddo', title: 'Aromaterapia Olistica' },
-      { url: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800', alt: 'Lavaggio sensoriale con massaggio', title: 'Bespoke Scalp Massage' },
-      { url: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&q=80&w=800', alt: 'Massaggio rilassante testa', title: 'Rituale Rigenerante Cute' }
+      { url: IMAGE_PATHS.salone[4], alt: 'Trattamento viso rigenerante', title: 'Facial Treatment Kobido' },
+      { url: IMAGE_PATHS.salone[5], alt: 'Oli essenziali naturali estratti a freddo', title: 'Aromaterapia Olistica' },
+      { url: IMAGE_PATHS.salone[6], alt: 'Lavaggio sensoriale con massaggio', title: 'Bespoke Scalp Massage' },
+      { url: IMAGE_PATHS.salone[0], alt: 'Massaggio rilassante testa', title: 'Rituale Rigenerante Cute' }
     ],
     faqs: [
       { question: 'Come viene eseguita l\'analisi preliminare della cute?', answer: 'Utilizziamo una microcamera tricologica ad altissima risoluzione per valutare lo stato di salute del cuoio capelluto, rilevando idratazione, presenza di sebo, tossine o desquamazione prima di personalizzare il rituale.' },
@@ -312,7 +356,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: 'Hair Integration',
     subtitle: 'Infoltimento & Allungamento Naturale',
     shortDesc: 'Soluzioni invisibili e non invasive per ritrovare volume, lunghezza e sicurezza. Nicole Vinti utilizza esclusivamente capelli veri certificati e tecniche di fissaggio ultra-delicate.',
-    image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=800',
+    image: IMAGE_PATHS.acconciature[8],
     problem: {
       title: 'Diradamento, alopecia o difficoltà a far crescere i capelli',
       description: 'Sia per fattori genetici, ormonali o stress, molte donne si trovano ad affrontare capelli estremamente fini, diradati sulla sommità o che si spezzano prima di raggiungere la lunghezza desiderata, compromettendo l\'autostima.',
@@ -344,10 +388,10 @@ export const SERVICES_DATA: ServiceDetail[] = [
     approach: 'L\'integrazione dei capelli non deve essere vissuta come una correzione di un difetto, ma come una celebrazione del tuo splendore. Nessuno noterà la differenza, tutti noteranno la tua nuova incredibile luce.',
     durationPrice: 'Consulenza e preventivo personalizzato gratuito in cabina privata',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1595853035070-59a39fe84de3?auto=format&fit=crop&q=80&w=800', alt: 'Capelli lunghi e folti biondi', title: 'Infoltimento Multidimensionale' },
-      { url: 'https://images.unsplash.com/photo-1605497746444-ac9dbd39f69c?auto=format&fit=crop&q=80&w=800', alt: 'Dettaglio applicazione extension', title: 'Micro-Integrazione Invisibile' },
-      { url: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800', alt: 'Lavaggio capelli sani e folti', title: 'Integrazione Volume Naturale' },
-      { url: 'https://images.unsplash.com/photo-1620331702289-5484cd1748f6?auto=format&fit=crop&q=80&w=800', alt: 'Sfumature bionde su capelli lunghi', title: 'Extension Luxury Silk' }
+      { url: IMAGE_PATHS.acconciature[8], alt: 'Capelli lunghi e folti biondi', title: 'Infoltimento Multidimensionale' },
+      { url: IMAGE_PATHS.acconciature[9], alt: 'Dettaglio applicazione extension', title: 'Micro-Integrazione Invisibile' },
+      { url: IMAGE_PATHS.acconciature[10], alt: 'Lavaggio capelli sani e folti', title: 'Integrazione Volume Naturale' },
+      { url: IMAGE_PATHS.acconciature[11], alt: 'Sfumature bionde su capelli lunghi', title: 'Extension Luxury Silk' }
     ],
     faqs: [
       { question: 'I capelli utilizzati sono veri al 100%?', answer: 'Sì, utilizziamo esclusivamente capelli veri vergini di prima scelta (Remy), con cuticole integre e orientate nella stessa direzione, per garantire morbidezza assoluta ed evitare nodi.' },
@@ -360,7 +404,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: 'Abbigliamento',
     subtitle: 'Capsule Collection & Tailoring',
     shortDesc: 'Capi sartoriali e accessori moda selezionati per esprimere la tua personalità. Un\'estensione naturale della consulenza d\'immagine per creare un total look coordinato.',
-    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800',
+    image: IMAGE_PATHS.nicole[4],
     problem: {
       title: 'Difficoltà ad abbinare abiti che rispecchino i propri colori e silhouette',
       description: 'Molti armadi sono pieni di vestiti acquistati d\'impulso, ma che poi non vengono mai indossati perché la forma non valorizza le curve naturali o il colore spegne la luminosità del volto.',
@@ -368,7 +412,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
         'Acquisto di abiti di tendenza che non si adattano alle proprie proporzioni fisiche.',
         'Incertezza nell\'abbinare i tessuti, i colori dei capi con il makeup e i capelli.',
         'Guardaroba disordinato e privo di una coerenza stilistica di base.',
-        'Frustrazione nel vestirsi la mattina, con la sensazione di "non aver mai nulla da mettersi".'
+        'Frustrazione nel vestirsi la mattina, con la sensazione di "non aver nulla da mettersi".'
       ]
     },
     solution: {
@@ -392,10 +436,10 @@ export const SERVICES_DATA: ServiceDetail[] = [
     approach: 'Un abito non deve travestirti, ma deve rivelarti. Con la nostra selezione di abbigliamento, applichiamo le regole dell\'armocromia e dello styling alla tua figura per farti sentire sicura ed elegante in ogni istante.',
     durationPrice: 'Consulenza di stile inclusa con l\'acquisto dei capi',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&q=80&w=800', alt: 'Abiti eleganti appesi', title: 'La Capsule Collection' },
-      { url: 'https://images.unsplash.com/photo-1583209814613-5116e6147d82?auto=format&fit=crop&q=80&w=800', alt: 'Tessuti di seta e lino dettagli', title: 'Tessuti Pregiati Artigianali' },
-      { url: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=800', alt: 'Modella vestito di classe giallo', title: 'Total Look Armocromatico' },
-      { url: 'https://images.unsplash.com/photo-1524250502761-136f2527df03?auto=format&fit=crop&q=80&w=800', alt: 'Dettagli di stile donna', title: 'Accessori in Pelle' }
+      { url: IMAGE_PATHS.nicole[4], alt: 'Abiti eleganti appesi', title: 'La Capsule Collection' },
+      { url: IMAGE_PATHS.nicole[5], alt: 'Tessuti di seta e lino dettagli', title: 'Tessuti Pregiati Artigianali' },
+      { url: IMAGE_PATHS.nicole[6], alt: 'Modella vestito di classe', title: 'Total Look Armocromatico' },
+      { url: IMAGE_PATHS.nicole[7], alt: 'Dettagli di stile donna', title: 'Accessori in Pelle' }
     ],
     faqs: [
       { question: 'Posso richiedere una sessione di Personal Shopping dedicata?', answer: 'Sì. Puoi prenotare una sessione esclusiva in cui un\'esperta del nostro team ti guiderà nella scelta dei capi perfetti per la tua stagione cromatica e la tua body shape, in totale privacy.' },
@@ -408,7 +452,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: 'Barber Shop',
     subtitle: 'Grooming Maschile d\'Eccellenza',
     shortDesc: 'L\'arte della rasatura tradizionale e dello styling maschile. Un angolo di puro benessere dedicato all\'uomo moderno che esige precisione sartoriale per capelli e barba.',
-    image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=800',
+    image: IMAGE_PATHS.salone[2],
     problem: {
       title: 'Barba ispida, irritazioni da rasatura e tagli senza carattere',
       description: 'Molti uomini sottovalutano la cura di barba e capelli, affidandosi a tagli rapidi o rasature frettolose che irritano la pelle, lasciano i peli della barba ispidi e non valorizzano la morfologia maschile.',
@@ -440,10 +484,10 @@ export const SERVICES_DATA: ServiceDetail[] = [
     approach: 'La cura dell\'uomo non è una routine veloce, ma un rituale di stile e rispetto per se stessi. Nel nostro Barber Shop, riscoprirai il piacere del tempo dedicato a te stesso.',
     durationPrice: 'Servizi a partire da €35',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=800', alt: 'Barbiere taglia capelli uomo', title: 'Taglio Geometrico Maschile' },
-      { url: 'https://images.unsplash.com/photo-1512864084360-7c0c4d0a0845?auto=format&fit=crop&q=80&w=800', alt: 'Rituale rasatura con lama a mano libera', title: 'Rasatura Tradizionale Rasoio' },
-      { url: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=800', alt: 'Prodotti e oli per barba luxury', title: 'Trattamento Barba & Olio Idratante' },
-      { url: 'https://images.unsplash.com/photo-1605497746444-ac9dbd39f69c?auto=format&fit=crop&q=80&w=800', alt: 'Taglio sfumato moderno', title: 'Hair Grooming Precisione' }
+      { url: IMAGE_PATHS.salone[2], alt: 'Barbiere taglia capelli uomo', title: 'Taglio Geometrico Maschile' },
+      { url: IMAGE_PATHS.salone[4], alt: 'Rituale rasatura con lama a mano libera', title: 'Rasatura Tradizionale Rasoio' },
+      { url: IMAGE_PATHS.acconciature[0], alt: 'Prodotti e oli per barba luxury', title: 'Trattamento Barba & Olio Idratante' },
+      { url: IMAGE_PATHS.acconciature[1], alt: 'Taglio sfumato moderno', title: 'Hair Grooming Precisione' }
     ],
     faqs: [
       { question: 'In cosa consiste il servizio a "Panno Caldo"?', answer: 'È un rituale di benessere profondo: il panno caldo-umido dilata i pori, ammorbidisce il pelo della barba e distende i muscoli del viso. Questo rende la rasatura incredibilmente scorrevole, riducendo a zero le irritazioni e lasciando la pelle morbida.' },
@@ -456,7 +500,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: 'Academy & Corsi',
     subtitle: 'Formazione Professionale d\'Élite',
     shortDesc: 'Svela i segreti delle tecniche esclusive di Nicole Vinti. Percorsi formativi avanzati in Dry Cut, Bridal Styling e Consulenza d\'Immagine per acconciatori che vogliono fare la differenza.',
-    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800',
+    image: IMAGE_PATHS.nicole[5],
     problem: {
       title: 'La standardizzazione del settore e la necessità di differenziarsi',
       description: 'Molti acconciatori faticano ad emergere e ad attrarre clientela alto-spendente perché ripetono tecniche superate, senza saper comunicare o personalizzare il servizio basandosi sui lineamenti e l\'armocromia.',
@@ -488,10 +532,10 @@ export const SERVICES_DATA: ServiceDetail[] = [
     approach: 'La formazione non deve essere solo un elenco di nozioni teoriche. Ti svelerò passo dopo passo come ho costruito la mia firma stilistica e il mio modello di business, guidandoti verso un posizionamento di lusso.',
     durationPrice: 'Masterclass a partire da 1 giorno intensivo con rilascio di Certificato Ufficiale',
     gallery: [
-      { url: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800', alt: 'Lezione teorica e pratica in aula', title: 'Aule Didattiche Esclusive' },
-      { url: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800', alt: 'Pratica e modellatura su modella', title: 'Pratica Diretta su Modelle' },
-      { url: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800', alt: 'Consegna dei diplomi certificati Nicole Vinti', title: 'Rilascio Diplomi Accreditati' },
-      { url: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=800', alt: 'Presentazione sul palco delle tendenze moda', title: 'Trend-Setting & Show live' }
+      { url: IMAGE_PATHS.nicole[5], alt: 'Lezione teorica e pratica in aula', title: 'Aule Didattiche Esclusive' },
+      { url: IMAGE_PATHS.nicole[6], alt: 'Pratica e modellatura su modella', title: 'Pratica Diretta su Modelle' },
+      { url: IMAGE_PATHS.nicole[7], alt: 'Consegna dei diplomi certificati Nicole Vinti', title: 'Rilascio Diplomi Accreditati' },
+      { url: IMAGE_PATHS.nicole[8], alt: 'Presentazione sul palco delle tendenze moda', title: 'Trend-Setting & Show live' }
     ],
     faqs: [
       { question: 'A chi sono rivolti i corsi dell\'Academy?', answer: 'I corsi sono pensati per acconciatori professionisti, truccatori, bridal specialist o aspiranti image consultant che desiderano innalzare il proprio livello tecnico e strategico.' },
@@ -504,7 +548,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
 export const INSTAGRAM_FEED: InstagramPost[] = [
   {
     id: 'post_1',
-    imageUrl: IMAGE_PATHS.bridalWaves,
+    imageUrl: IMAGE_PATHS.wedding[0],
     likes: 1240,
     comments: 48,
     caption: 'La perfezione è nei dettagli. Un semiraccolto morbido con onde couture creato per la nostra bellissima sposa. ✨ Vuoi scoprire il tuo stile? Clicca sul link in bio. #nicolevinti #bridalhair #sposa #weddingday',
@@ -512,7 +556,7 @@ export const INSTAGRAM_FEED: InstagramPost[] = [
   },
   {
     id: 'post_2',
-    imageUrl: IMAGE_PATHS.nicoleVinti,
+    imageUrl: IMAGE_PATHS.nicole[0],
     likes: 2182,
     comments: 92,
     caption: 'Prenditi cura della tua unicità. Dietro ogni acconciatura c\'è uno studio attento dei lineamenti, della personalità e del sogno di ogni donna. 🤍 Vi aspetto in atelier per disegnare insieme il vostro prossimo look. #hairdesigner #nicolevinti #imageconsultant',
@@ -520,7 +564,7 @@ export const INSTAGRAM_FEED: InstagramPost[] = [
   },
   {
     id: 'post_3',
-    imageUrl: IMAGE_PATHS.bridalUpdo,
+    imageUrl: IMAGE_PATHS.acconciature[2],
     likes: 1850,
     comments: 64,
     caption: 'Il classico incontra il moderno. Uno chignon basso strutturato ma morbido, impreziosito da dettagli in perle. Un design senza tempo per un giorno indimenticabile. 👑 #bridalupdo #chignon #weddinghairstyle #sposa',
@@ -528,7 +572,7 @@ export const INSTAGRAM_FEED: InstagramPost[] = [
   },
   {
     id: 'post_4',
-    imageUrl: IMAGE_PATHS.blondeBalayage,
+    imageUrl: IMAGE_PATHS.acconciature[4],
     likes: 1420,
     comments: 55,
     caption: 'Golden hour nei tuoi capelli. ✨ Balayage Deluxe nei toni del miele e dello champagne per un effetto multidimensionale che illumina l\'incarnato. Chi vuole rinnovare il proprio colore? 🙋‍♀️ #balayage #blondehair #couturecolor #nicolevinti',
@@ -543,7 +587,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Sposa Giugno 2026',
     text: 'Nicole ha saputo capire al volo quello che volevo. L\'acconciatura era pazzesca, ha resistito intatta fino alle 4 del mattino nonostante i balli sfrenati e l\'umidità del lago. Tutti mi hanno fatto i complimenti. Una vera artista!',
     rating: 5,
-    image: IMAGE_PATHS.bridalWaves
+    image: IMAGE_PATHS.wedding[1]
   },
   {
     id: 't_2',
@@ -551,7 +595,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Cliente Storica - Cut & Color',
     text: 'Da quando vado da Nicole, i miei capelli hanno finalmente una forma anche a casa. Il suo Dry Cut è fantastico, e il Balayage che mi realizza attira l\'attenzione di tutti. Non la cambierei con nessun altro al mondo.',
     rating: 5,
-    image: IMAGE_PATHS.nicoleVinti
+    image: IMAGE_PATHS.nicole[1]
   },
   {
     id: 't_3',
@@ -559,7 +603,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Consulenza d\'Immagine',
     text: 'La consulenza di armocromia e facial shape mi ha svoltato la vita. Ho finalmente capito perché alcuni colori di capelli mi spegnevano e ho fatto il cambio consigliato da Nicole. Risultato? Mi sento ringiovanita e sicura di me come non mai!',
     rating: 5,
-    image: IMAGE_PATHS.blondeBalayage
+    image: IMAGE_PATHS.acconciature[2]
   }
 ];
 
